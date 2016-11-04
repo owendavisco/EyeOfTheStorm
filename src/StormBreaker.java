@@ -11,6 +11,22 @@ public class StormBreaker {
     private static final int SECOND = 1000;
     private static final int MINUTE = SECOND * 60;
 
+    /* Example execution
+    *
+    * # Runs in local mode (LocalCluster), with topology name "StormBreaker"
+    * $ storm jar EyeOfTheStorm-1.0.jar StormBreaker
+    *
+    * # Runs in local mode (LocalCluster), with topology name "foobar"
+    * $ storm jar EyeOfTheStorm-1.0.jar StormBreaker foobar
+    *
+    * # Runs in local mode (LocalCluster), with topology name "foobar"
+    * $ storm jar EyeOfTheStorm-1.0.jar StormBreaker foobar local
+    *
+    * # Runs in remote/cluster mode, with topology name "production-topology"
+    * $ storm jar EyeOfTheStorm-1.0.jar StormBreaker production-topology remote
+    *
+    *
+    * */
     public static void main(String[] args) throws Exception {
         System.out.println("***************** StormBreaker Started *****************");
 

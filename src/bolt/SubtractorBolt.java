@@ -19,6 +19,12 @@ public class SubtractorBolt extends BaseRichBolt implements IBolt {
     }
 
     public void execute(Tuple tuple) {
+        try {
+            Thread.sleep(10);
+        }
+        catch (InterruptedException e) {
+
+        }
         collector.emit(tuple, new Values(tuple.getInteger(0) - 1));
         collector.ack(tuple);
     }
